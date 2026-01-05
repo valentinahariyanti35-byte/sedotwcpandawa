@@ -2,64 +2,104 @@
 <html lang="id">
 <head>
 <meta charset="UTF-8">
-<title>Sedot WC Pandawa | Jasa Sedot WC Profesional</title>
+<title>Sedot WC Pandawa | Profesional & Terpercaya</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: 'Segoe UI', Arial, sans-serif;
-  background: #f3f4f6;
-  color: #333;
+  color: white;
 }
 
-/* HEADER */
-header {
-  background: linear-gradient(135deg, #0f172a, #1e40af);
-  color: white;
-  padding: 60px 20px;
+/* ===== HERO FULL SCREEN ===== */
+.hero {
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url('bg.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
 }
 
-header h1 {
-  margin: 0;
-  font-size: 36px;
+.hero-content {
+  backdrop-filter: blur(6px);
+  background: rgba(0,0,0,0.35);
+  padding: 50px 30px;
+  border-radius: 20px;
+  max-width: 700px;
 }
 
-header p {
-  margin: 15px 0 25px;
-  font-size: 16px;
+.hero h1 {
+  font-size: 42px;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 30px;
 }
 
 .btn {
   background: #25D366;
   color: white;
-  padding: 14px 26px;
+  padding: 16px 32px;
   border-radius: 30px;
   text-decoration: none;
   font-weight: bold;
-  display: inline-block;
+  font-size: 16px;
 }
 
-/* CONTAINER */
-.container {
-  max-width: 1000px;
-  margin: auto;
-  padding: 30px 20px;
-}
-
-/* SECTION */
+/* ===== SECTION UMUM ===== */
 .section {
-  background: white;
-  padding: 25px;
-  margin-bottom: 25px;
-  border-radius: 14px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  min-height: 100vh;
+  padding: 80px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.section h2 {
-  margin-top: 0;
-  color: #1e3a8a;
+.section-content {
+  background: rgba(0,0,0,0.55);
+  backdrop-filter: blur(5px);
+  padding: 40px;
+  border-radius: 18px;
+  max-width: 1000px;
+  width: 100%;
+}
+
+/* BACKGROUND TIAP SECTION */
+.layanan {
+  background:
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url('layanan.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.keunggulan {
+  background:
+    linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+    url('keunggulan.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.area {
+  background:
+    linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+    url('area.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 /* GRID */
@@ -67,19 +107,19 @@ header p {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 15px;
+  margin-top: 20px;
 }
 
 .box {
-  background: #f8fafc;
+  background: rgba(255,255,255,0.1);
   padding: 15px;
-  border-radius: 10px;
-  border-left: 4px solid #1e40af;
+  border-radius: 12px;
+  text-align: center;
 }
 
 /* FOOTER */
 footer {
   background: #020617;
-  color: #9ca3af;
   text-align: center;
   padding: 20px;
   font-size: 14px;
@@ -97,7 +137,8 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.35);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+  z-index: 999;
 }
 
 .wa-float img {
@@ -108,48 +149,56 @@ footer {
 
 <body>
 
-<header>
-  <h1>Sedot WC Pandawa</h1>
-  <p>Jasa Sedot WC • Cepat • Bersih • Terpercaya • 24 Jam</p>
-  <a class="btn"
-     href="https://wa.me/6282225588791?text=Halo%20saya%20mau%20pesan%20jasa%20sedot%20WC"
-     target="_blank">
-     Pesan Sekarang
-  </a>
-</header>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Sedot WC Pandawa</h1>
+    <p>Solusi WC Penuh & Mampet<br>Cepat • Bersih • Terpercaya • 24 Jam</p>
+    <a class="btn"
+       href="https://wa.me/6282225588791?text=Halo%20saya%20mau%20pesan%20jasa%20sedot%20WC"
+       target="_blank">
+       Pesan Sekarang
+    </a>
+  </div>
+</section>
 
-<div class="container">
-
-  <div class="section">
+<!-- LAYANAN -->
+<section class="section layanan">
+  <div class="section-content">
     <h2>Layanan Kami</h2>
     <div class="grid">
-      <div class="box">Sedot Sepitank</div>
-      <div class="box">Sedot Saluran</div>
-      <div class="box">Sedot Wastafell</div>
+      <div class="box">Sedot WC Rumah</div>
+      <div class="box">Sedot WC Kos & Kontrakan</div>
+      <div class="box">Sedot Septic Tank</div>
       <div class="box">WC Mampet & Penuh</div>
       <div class="box">Sedot Limbah</div>
     </div>
   </div>
+</section>
 
-  <div class="section">
+<!-- KEUNGGULAN -->
+<section class="section keunggulan">
+  <div class="section-content">
     <h2>Kenapa Pilih Kami?</h2>
     <div class="grid">
-      <div class="box">✔ Respon Cepat</div>
-      <div class="box">✔ Harga Terjangkau</div>
-      <div class="box">✔ Tenaga Berpengalaman</div>
-      <div class="box">✔ Siap 24 Jam</div>
+      <div class="box">Respon Cepat</div>
+      <div class="box">Harga Terjangkau</div>
+      <div class="box">Tenaga Berpengalaman</div>
+      <div class="box">Layanan 24 Jam</div>
     </div>
   </div>
+</section>
 
-  <div class="section">
+<!-- AREA -->
+<section class="section area">
+  <div class="section-content">
     <h2>Area Layanan</h2>
-    <p>Melayani Purwokerto dan sekitarnya.</p>
+    <p>Melayani Purwokerto dan sekitarnya dengan armada siap jalan.</p>
   </div>
-
-</div>
+</section>
 
 <footer>
-  © 2026 Sedot WC Pandawa • Website Resmi
+  © 2025 Sedot WC Pandawa • Website Resmi
 </footer>
 
 <a class="wa-float"
